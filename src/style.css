@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background: linear-gradient(
+    45deg,
+    #718355,
+    #87986a,
+    #97a97c,
+    #b5c99a,
+    #cfe1b9,
+    #e9f5db
+  );
+  height: 100vh;
+}
+header {
+  border: 1px solid #b5c99a;
+  text-align: center;
+  padding: 1rem;
+  background-color: #eeeae6;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  color: #9c6644;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+.detail {
+  margin: 2rem;
+  padding: 1rem;
+  border: 1px solid #b5c99a;
+  display: flex;
+  gap: 20px;
+  height: 78vh;
+  border-radius: 24px;
+  background-color: #eeeae6;
+}
+.create {
+  border: 1px solid #b5c99a;
+  width: 50%;
+  padding: 1rem;
+  border-radius: 16px;
+  background-color: #b5c99a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.create form input {
+  width: 550px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 0.2rem;
+}
+.create form input::placeholder {
+  font-size: 1rem;
+  color: black;
+}
+.create form input.active,
+.create form input:focus {
+  outline: none;
+}
+.create form button {
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+.create form button:hover {
+  background-color: #718355;
+  color: white;
+}
+.tasks {
+  border: 1px solid #b5c99a;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 16px;
+  background-color: #b5c99a;
+  overflow-y: auto;
+}
+.task {
+  border: 1px solid #97a97c;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 16px;
+  line-height: 30px;
+  position: relative;
+  margin-bottom: 1rem;
+}
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.task h2 {
+  color: #718355;
+  font-size: 2rem;
+  word-wrap: break-word;
+}
+.task h4 {
+  color: #87986a;
+  word-wrap: break-word;
+}
+.task button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  color: #87986a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.task button:hover {
+  color: red;
+}

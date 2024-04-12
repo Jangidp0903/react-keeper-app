@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import CreateArea from "./Components/CreateArea";
+// import Task from "./Components/Task";
+import "./style.css";
+import TaskContext from "./Context/TaskContext";
+import Tasks from "./Components/Tasks";
+import { useContext } from "react";
 
 function App() {
+  const ctx = useContext(TaskContext);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1>Keeper App</h1>
       </header>
+      <div className="detail">
+        <CreateArea onAdd={ctx.addtaskhandler} />
+        <Tasks />
+      </div>
     </div>
   );
 }
